@@ -7,11 +7,13 @@ namespace Task3
         static void Main(string[] args)
         {
 
-            Custumer bobJ = new Custumer("Bob","Johnson",new string[] { "123-123-123", "123-153-123", "723-123-123" },new string[] { "2244" } );
-            Custumer simonB = new Custumer("Simon","Bronson",new string[] {"111-112-122", "151-112-122" },new string[] {"1212" });
-            Custumer JohbA = new Custumer("John", "Abramson", new string[] { "423-323-223", "111-152-152" }, new string[] { "3244" });
-            Custumer MikeR = new Custumer("Mike", "Rimus", new string[] { "511-612-722", "121-152-127" }, new string[] { "5216" });
+            Custumer bobJ = new Custumer("Bob","Johnson",new string[] { "123-123-123", "123-153-123", "723-123-123" },new string[] { "2244" },400 );
+            Custumer simonB = new Custumer("Simon","Bronson",new string[] {"111-112-122", "151-112-122" },new string[] {"1212" },200);
+            Custumer JohbA = new Custumer("John", "Abramson", new string[] { "423-323-223", "111-152-152" }, new string[] { "3244" },150);
+            Custumer MikeR = new Custumer("Mike", "Rimus", new string[] { "511-612-722", "121-152-127" }, new string[] { "5216" },80);
 
+            CashServices widrowal = new CashServices();
+            
             Custumer[] custumers = new Custumer[] { bobJ,simonB,JohbA,MikeR};
             bool isWrong = false;
             //LoopThruCustumersArr(custumers);
@@ -38,6 +40,28 @@ namespace Task3
                             "1.Check Balance\n" +
                             "2.Cash Withdrawal\n" +
                             "3.Cash Deposit\n");
+                        string userATMImput = Console.ReadLine();
+                        if (userATMImput=="1")
+                        {
+
+                            Console.WriteLine($"{custumer.Name} {custumer.LastName} you have {custumer.Balance} $ on your account.");
+                             
+
+                        }else if (userATMImput=="2")
+                        {
+                            Console.WriteLine("Imput value you like to withdrew");
+                            int userWidrowal = Convert.ToInt32(Console.ReadLine());
+                            widrowal.CheckBalance(custumer.Balance,userWidrowal);
+                            Console.WriteLine(widrowal.CheckBalance(custumer.Balance, userWidrowal));
+                        }
+
+
+
+
+
+
+
+
 
                     }
                     
