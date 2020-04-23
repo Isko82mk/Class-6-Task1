@@ -14,8 +14,6 @@ namespace Task3
 
             CashServices services = new CashServices();
             
-
-            
             Custumer[] custumers = new Custumer[] { bobJ,simonB,JohbA,MikeR};
             bool isWrong = false;
             //LoopThruCustumersArr(custumers);
@@ -64,22 +62,14 @@ namespace Task3
                             int userDepo = Convert.ToInt32(Console.ReadLine());
                            Console.WriteLine( $"You deposited { userDepo} $. Your balance is {services.Deposite(custumer.Balance, userDepo)} $.\n" +
                                $"Thank you for using the ATM app.");
-
                         }
-
                     }
-                    
                 }
             }
             if (!isWrong)
             {
                 Console.WriteLine("Eroor...Wrong card number or pin");
             }
-
-           
-
-
-
             Console.ReadLine();
         }
 
