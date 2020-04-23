@@ -12,7 +12,9 @@ namespace Task3
             Custumer JohbA = new Custumer("John", "Abramson", new string[] { "423-323-223", "111-152-152" }, new string[] { "3244" },150);
             Custumer MikeR = new Custumer("Mike", "Rimus", new string[] { "511-612-722", "121-152-127" }, new string[] { "5216" },80);
 
-            CashServices widrowal = new CashServices();
+            CashServices services = new CashServices();
+            
+
             
             Custumer[] custumers = new Custumer[] { bobJ,simonB,JohbA,MikeR};
             bool isWrong = false;
@@ -41,21 +43,30 @@ namespace Task3
                             "2.Cash Withdrawal\n" +
                             "3.Cash Deposit\n");
                         string userATMImput = Console.ReadLine();
+
                         if (userATMImput=="1")
                         {
 
-                            Console.WriteLine($"{custumer.Name} {custumer.LastName} you have {custumer.Balance} $ on your account.");
+                            Console.WriteLine($"{custumer.Name} {custumer.LastName} you have {custumer.Balance} $ on your account./n" +
+                                $"Thank you for using the ATM app.");
                              
 
                         }else if (userATMImput=="2")
                         {
                             Console.WriteLine("Imput value you like to withdrew");
                             int userWidrowal = Convert.ToInt32(Console.ReadLine());
-                            widrowal.CheckBalance(custumer.Balance,userWidrowal);
-                            Console.WriteLine(widrowal.CheckBalance(custumer.Balance, userWidrowal));
+                          
+                            Console.WriteLine($"You withdrew {userWidrowal}$. You have{ services.CheckBalance(custumer.Balance, userWidrowal)}$  left on your account.\n" +
+                                $"Thank you for using the ATM app.");
+                        }else if (userATMImput=="3")
+                        {
+                            Console.WriteLine("Enter the amount of deposit");
+                            int userDepo = Convert.ToInt32(Console.ReadLine());
+                           Console.WriteLine( $"You deposited { userDepo} $. Your balance is {services.Deposite(custumer.Balance, userDepo)} $.");
+
                         }
 
-
+                     
 
 
 

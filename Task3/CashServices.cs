@@ -14,7 +14,10 @@ namespace Task3
 
         }
 
-
+        public int Deposite(int balance,int deposite)
+        {
+            return balance + deposite;
+        }
 
 
 
