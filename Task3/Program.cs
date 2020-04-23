@@ -62,17 +62,10 @@ namespace Task3
                         {
                             Console.WriteLine("Enter the amount of deposit");
                             int userDepo = Convert.ToInt32(Console.ReadLine());
-                           Console.WriteLine( $"You deposited { userDepo} $. Your balance is {services.Deposite(custumer.Balance, userDepo)} $.");
+                           Console.WriteLine( $"You deposited { userDepo} $. Your balance is {services.Deposite(custumer.Balance, userDepo)} $.\n" +
+                               $"Thank you for using the ATM app.");
 
                         }
-
-                     
-
-
-
-
-
-
 
                     }
                     
