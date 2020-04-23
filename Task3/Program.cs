@@ -14,11 +14,11 @@ namespace Task3
 
             Custumer[] custumers = new Custumer[] { bobJ,simonB,JohbA,MikeR};
             bool isWrong = false;
-            LoopThruCustumersArr(custumers);
+            //LoopThruCustumersArr(custumers);
 
-            Console.WriteLine("Welcome to the ATM app");
+            Console.WriteLine("Welcome to the ATM app\n");
 
-            Console.WriteLine("Please enter your card numer:");
+            Console.WriteLine("Please enter your card number:");
             string userCardNumberImput = Console.ReadLine();
 
             Console.WriteLine("Enter Pin:");
@@ -31,8 +31,14 @@ namespace Task3
                 {
                     if(custumer.CardNumber[i] == userCardNumberImput && custumer.PinNumber[i]==userPinNumberImput)
                     {
+                        isWrong = true;
                         Console.WriteLine($"Welcome{custumer.Name} {custumer.LastName}");
-                        isWrong = false;
+                       
+                        Console.WriteLine("What would you like to do:\n" +
+                            "1.Check Balance\n" +
+                            "2.Cash Withdrawal\n" +
+                            "3.Cash Deposit\n");
+
                     }
                     
                 }
@@ -41,8 +47,8 @@ namespace Task3
             {
                 Console.WriteLine("Eroor...Wrong card number or pin");
             }
-             
 
+           
 
 
 
