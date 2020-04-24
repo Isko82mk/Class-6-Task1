@@ -73,13 +73,13 @@ namespace Task3
             Console.ReadLine();
         }
 
-        public static void LoopThruCustumersArr(Custumer []custumers)
-        {
-            foreach (Custumer custumer in custumers)
-            {
-                Console.WriteLine($"{custumer.Name}{custumer.LastName}");
-            }
-        }
+        //public static void LoopThruCustumersArr(Custumer []custumers)
+        //{
+        //    foreach (Custumer custumer in custumers)
+        //    {
+        //        Console.WriteLine($"{custumer.Name}{custumer.LastName}");
+        //    }
+        //}
 
     }
 }
