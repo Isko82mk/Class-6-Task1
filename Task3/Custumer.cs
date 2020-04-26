@@ -10,7 +10,6 @@ namespace Task3
         public string LastName { get; set; }
         public string[] CardNumber { get; set; }
         public string[] PinNumber { get; set; }
-
         public int Balance { get; set; }
 
         
